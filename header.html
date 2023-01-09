@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <style>
+    .header1{
+        background-color: green;
+        height: 8%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr 1.5fr;
+    }
+    .header1 > div{
+        text-align: center;
+        margin: auto auto;
+        font-size: 25px;
+        
+    }
+    .grid1{
+        grid-column-start: 2;
+    }
+    .header_grid{
+       display: inline-block;
+    }
+    .grid1{
+        background-color: green;
+    }
+    .p_white{
+        color: white;
+    }
+    .header_kakao{
+        border-color: whitesmoke;
+        padding: 10px 10px;
+        border-style : solid;
+        border-radius: 35%
+    }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <!-- 나중에 하이퍼로 다 바꿔야함 또는 스크립트 온 클릭으로 다 넣어야함 -->
+        <div class="header1"> 
+            <div class="header_grid grid1">
+                <!-- 회사 로그 s-->
+                <img src="450px-Warcraft3_log2.png" height="140px">
+            </div>
+            <div class="header_grid grid2">
+                <p class="p_white">회사소개</p>
+            </div>
+            <div class="header_grid grid3">
+                <p class="p_white">사업영역</p>
+            </div>
+            <div class="header_grid grid4">
+                <p class="p_white">제품소개</p>
+            </div>
+            <div class="header_grid grid5">
+                <p class="p_white">홍보센터</p>
+            </div>
+            <div class="header_grid grid6">
+                <div class="header_kakao">
+                    <p class="p_white">카카오톡</p>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

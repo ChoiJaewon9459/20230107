@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-one포트폴리오</title>
+
+</head>
+<body>
+
+
+
+    <!-- 일단 글어오긴했는데 이해가 안되서 다시 정리 
+    https://kyung-a.tistory.com/18
+        https://sjh836.tistory.com/52
+    
+     23 01 08
+    -->
+    <div data-include-path="footer.html"></div>
+
+   <script>
+
+       window.addEventListener('load', function() {
+           var allElements = document.getElementsByTagName('*');
+           Array.prototype.forEach.call(allElements, function(el) {
+               var includePath = el.dataset.includePath;
+               if (includePath) {
+                   var xhttp = new XMLHttpRequest();
+                   xhttp.onreadystatechange = function () {
+                       if (this.readyState == 4 && this.status == 200) {
+                           el.outerHTML = this.responseText;
+                       }
+                   };
+                   xhttp.open('GET', includePath, true);
+                   xhttp.send();
+               }
+           });
+       });
+
+   </script>
+</body>
+
+</html>
